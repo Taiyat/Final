@@ -1,0 +1,25 @@
+<h1>Editing Player #<%= @player.id %></h1>
+
+<form action="/players/<%= @player.id %>/update">
+  <div>
+    <label for="name">name</label><br />
+    <input id="name" name="name" value="<%= @player.name  %>" type="text" />
+  </div>
+  <div>
+    <label for="team">team</label><br />
+    <input id="team" name="team" value="<%= @player.team  %>" type="text" />
+  </div>
+   <div>
+    <label for="password">password</label><br />
+    <input id="password" name="password" type="password" />
+  </div>
+     <div>
+    <label for="password_confirmation">password_confirmation</label><br />
+    <input id="password_confirmation" name="password_confirmation" type="password" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

@@ -1,0 +1,30 @@
+<h1>Players</h1>
+
+<p><a href="/new_player">Add a New Player</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name &nbsp;</th>
+      <th>Team</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @players.each do |player| %>
+    <tr>
+          <td><%= player.name %></td>
+          <td><%= player.team %></td>
+      <%if session['username']%>
+          <td><a href="/players/<%= player.id %>">Show</a> | </td>
+      <td><a href="/players/<%= player.id %>/edit">Edit</a> | </td>
+      <td><a href="/players/<%= player.id %>/destroy">Destroy</a></td>
+    </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+

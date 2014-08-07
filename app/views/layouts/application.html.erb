@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final</title><script src="//code.jquery.com/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div>
+    <% if session['username']%>
+    You're signed in, <%= session['username']%>
+    <a href="/sessions/destroy">Sign Out</a>
+    <% else %>
+     <a href="/sessions/new">Sign in</a>
+    <% end %>
+  </div>
+  
+ 
+<%= yield %>
+
+</body>
+</html>

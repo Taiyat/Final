@@ -1,0 +1,16 @@
+<h1>Player #<%= @player.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @player.name %></p>
+</div>
+<div>
+  <% p = Player. find_by_id(session['user_id']) %>
+</div>
+<div>
+  <strong>Team</strong>:<br />
+  <p><%= @player.team %></p>
+</div>
+
+<a href="/players/<%= @player.id %>/edit">Edit</a> |
+<a href="/players/<%= @player.id %>/destroy">Destroy</a>
